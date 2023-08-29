@@ -22,7 +22,7 @@ body {
 	background-size: cover;
 	background: linear-gradient(-135deg, #1b4070, #0c1c49);
 }
-*/ ::selection {
+/**/ ::selection {
 	background: #020616;
 	color: rgb(192, 162, 162);
 }

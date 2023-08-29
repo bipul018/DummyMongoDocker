@@ -12,7 +12,9 @@ RUN ls
 COPY ./ ./
 RUN ls
 
+
 COPY run_services.sh .
+RUN chmod +x /app/run_services.sh
 EXPOSE 3000
 ENV CI=true
 CMD ["/bin/bash", "-c", "/app/run_services.sh"]

@@ -1,16 +1,18 @@
-
-FROM mongo:latest
-
-ENV MONGO_INITDB_ROOT_USERNAME=root
-ENV MONGO_INITDB_ROOT_PASSWORD=toor
-ENV MONGO_INITDB_DATABASE=bunbun
-ENV MONGO_USER=user
-ENV MONGO_PWD=resu
-ENV MONGO_NAME=bunbun
-
-COPY setup.js /docker-entrypoint-initdb.d/
+FROM node:20.3
 
 
-VOLUME /data/db
+WORKDIR /app/
+COPY package.json ./
+COPY package-lock.json ./
+RUN ls
 
-CMD ["mongod"]
+RUN npm i
+RUN ls
+
+COPY ./ ./
+RUN ls
+
+COPY run_services.sh .
+EXPOSE 3000
+ENV CI=true
+CMD ["/bin/bash", "-c", "/app/run_services.sh"]

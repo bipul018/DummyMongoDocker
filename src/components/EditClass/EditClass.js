@@ -261,7 +261,7 @@ class EditClassPopupForm extends Component {
           >
             {subjectData.map((item, index) => {
               return (
-                <Option key={item.subjectName} value={item._id} label={item.subjectName}>
+                <Option key={item._id} value={item._id} label={item.subjectName}>
                   {item.subjectName}
                 </Option>
               );

@@ -174,9 +174,9 @@ export class AddSubject extends Component {
                       subjectCode: this.state.subjectSelected.subjectCode,
                     });
                     message.success("Subject updated Sucessfully");
-                    setTimeout(() => {
+                    
                       window.location.reload();
-                    }, 1000);
+                    
                   } else {
                     message.error("Subject Cannot be updated");
                   }
@@ -191,9 +191,9 @@ export class AddSubject extends Component {
                 onClick={async () => {
                     axios.post(apiSubjectUrl +`/delete/${this.state.subjectSelected._id.toString()}`, {});
                     message.success("Subject deleted Sucessfully");
-                    setTimeout(() => {
+                    
                       window.location.reload();
-                    }, 1000);
+                    
                 
                 }}
               >
@@ -240,9 +240,9 @@ export class AddSubject extends Component {
                     subjectCode: subjectCode,
                   });
                   message.success("Subject Added Sucessfully");
-                  setTimeout(() => {
+                  
                     window.location.reload();
-                  }, 1000);
+                  
                 } else {
                   message.error("Subject Cannot be Added");
                 }

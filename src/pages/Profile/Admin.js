@@ -265,7 +265,7 @@ function RoutineTable(props) {
     const input = document.querySelector("#admin_table_body");
   
     // Set the page size for the PDF
-    const pdf = new jsPDF("p", "pt", "a3");
+    const pdf = new jsPDF("p", "pt", "a4");
   
     // Function to convert the HTML element to canvas
     const canvasToImage = async () => {
@@ -277,7 +277,7 @@ function RoutineTable(props) {
     // Convert the HTML to canvas and then to an image
     canvasToImage().then((imgData) => {
       // Add the image to the PDF
-      pdf.addImage(imgData, "JPEG", 20, 20, 750, 400);
+      pdf.addImage(imgData, "JPEG", 20, 20, 550, 400);
   
       // Save the PDF with the filename "Myroutine.pdf"
       pdf.save("Myroutine.pdf");

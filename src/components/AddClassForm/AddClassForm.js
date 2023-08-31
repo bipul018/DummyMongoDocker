@@ -500,9 +500,9 @@ class AddClassPopupForm extends Component {
                 this.setState({ selectedSubjectID: value })
               }}
             >
-              {subjectData.map((item, index) => {
+              {subjectData.map((item) => {
                 return (
-                  <Option key={item.subjectName} value={`${item._id}`} label={item.subjectName}>
+                  <Option key={item._id} value={item._id} label={item.subjectName}>
                     {item.subjectName}
                   </Option>
                 );

@@ -1,6 +1,8 @@
-export const backendUrl = process.env.REACT_APP_BACKEND_URL;
+// export const backendUrl = process.env.REACT_APP_BACKEND_URL;
+export const backendUrl = "/api";
 
-export const apiClassUrl = backendUrl + "/api/class";
+
+export const apiClassUrl = backendUrl + "/class";
 export const apiTeacherUrl = backendUrl + "/user/admin/api/teacher";
 export const apiProgramUrl = backendUrl + "/user/admin/api/program";
 export const apiSubjectUrl = backendUrl + "/user/admin/api/subject";
